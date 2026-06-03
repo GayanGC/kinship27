@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #0a0a0c;
+  --color-slate-grey: #121217;
+  --color-electric-blue: #00f0ff;
+  --color-cyan-glow: #00b8ff;
+  --font-sans: "Outfit", "Inter", sans-serif;
+  
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px -2px var(--color-electric-blue), 0 0 20px -2px var(--color-cyan-glow);
+  }
+  to {
+    box-shadow: 0 0 20px 2px var(--color-electric-blue), 0 0 40px 5px var(--color-cyan-glow);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-charcoal);
+    color: #f3f4f6;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  ::selection {
+    background-color: var(--color-electric-blue);
+    color: var(--color-charcoal);
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 184, 255, 0.3);
+  }
+  .bg-glass {
+    background-color: rgba(18, 18, 23, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .border-glow {
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+  }
+  .hover-glow:hover {
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+    border-color: var(--color-electric-blue);
+  }
+}
