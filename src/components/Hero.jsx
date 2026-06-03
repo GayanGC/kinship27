@@ -9,11 +9,6 @@ const Hero = () => {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-glow/10 rounded-full blur-[100px] animate-pulse delay-1000"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        {/* Antigravity tag */}
-        <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full border-glow bg-glass mb-8 animate-[float_6s_ease-in-out_infinite]">
-          <span className="w-2 h-2 rounded-full bg-electric-blue animate-pulse"></span>
-          <span className="text-sm font-medium tracking-wider text-electric-blue">ANTIGRAVITY TECH VIBE</span>
-        </div>
 
         {/* Headline */}
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
