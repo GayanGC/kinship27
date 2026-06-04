@@ -64,13 +64,14 @@ Additional Details: ${formData.message}`;
     const publicKey = 'K43fmiOV67HM8rs67';
 
     const templateParams = {
-      from_name: formData.name,
-      contact_number: formData.contactNumber,
-      category: formData.category,
-      project_name: formData.projectName,
-      features: formData.features.join(', '),
-      deadline: formData.deadline,
-      budget: formData.budget,
+      name: formData.name,
+      clientName: formData.name,
+      contactNumber: formData.contactNumber,
+      projectCategory: formData.category,
+      projectTopic: formData.projectName,
+      requiredFeatures: formData.features.join(', '),
+      targetDeadline: formData.deadline,
+      budgetEstimate: formData.budget,
       message: formData.message,
     };
 
